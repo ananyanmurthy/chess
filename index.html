@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image in Corner</title>
+    <title>Image in Corners</title>
     <style>
         body {
             margin: 0;
@@ -11,16 +11,44 @@
             position: relative;
         }
 
-        img {
+        /* Top-right image */
+        img.top-right {
             position: absolute;
             top: 0;
             right: 0;
-            width: 100px;  /* Adjust image size as needed */
+            width: 100px; /* Adjust image size as needed */
             height: auto;
+        }
+
+        /* Bottom-left image */
+        img.bottom-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px; /* Lemon-sized */
+            height: auto;
+            margin: 10px; /* optional padding from edges */
+        }
+
+        .title-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: "Georgia", serif;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <img src="chess.jpg" alt="Corner Image">
+    <img src="chess.jpg" alt="Top Right Image" class="top-right">
+    <img src="airtel.jpg" alt="Bottom Left Image" class="bottom-left">
+    
+    <div class="title-text">
+        What you’ve just moved holds the key—let the realm’s name guide you, <br>
+        and let your move complete the address that opens the next world.
+    </div>
 </body>
 </html>
+
